@@ -23,8 +23,11 @@ if (cookievalue == 'optimization') {
   // Reset the cookie
   jQuery.cookie('ab-test-'+testid, 'optimization', { expires: 30, path: '/' });
   // Send data to Google Analytics
-  googleAnalyticsTrackEvent('OD-test', 'GTM-'+testid+' '+testname, 'optimization',1);
-  if(debug==1){ console.log('Event send to Google Analytics: Category: AD-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: optimization, Value: 1'); }
+  // Classic Google Analytics (ga.js)
+  _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization',1]);
+  // Universal Analytics (analytics.js)
+  ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization',1);
+  if(debug==1){ console.log('Event send to Google Analytics: Category: AB-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: optimization, Value: 1'); }
 }
 else {
   if (cookievalue == 'control') {
@@ -32,8 +35,11 @@ else {
     // Reset the cookie
     jQuery.cookie('ab-test-'+testid, 'control', { expires: 30, path: '/' });
     // Send data to Google Analytics
-    googleAnalyticsTrackEvent('OD-test', 'GTM-'+testid+' '+testname, 'control',1);
-    if(debug==1){ console.log('Event send to Google Analytics: Category: AD-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: control, Value: 1'); }
+    // Classic Google Analytics (ga.js)
+    _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'control',1]);
+    // Universal Analytics (analytics.js)
+    ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'control',1);
+    if(debug==1){ console.log('Event send to Google Analytics: Category: AB-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: control, Value: 1'); }
   }
   else {
     if(debug==1){ console.log('Choose random a version of the A/B test.'); }
@@ -43,16 +49,22 @@ else {
       // Set the cookie
       jQuery.cookie('ab-test-'+testid, 'optimization', { expires: 30, path: '/' });
       // Send data to Google Analytics
-      googleAnalyticsTrackEvent('OD-test', 'GTM-'+testid+' '+testname, 'optimization',1);
-      if(debug==1){ console.log('Event send to Google Analytics: Category: AD-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: optimization, Value: 1'); }
+      // Classic Google Analytics (ga.js)
+      _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization',1]);
+      // Universal Analytics (analytics.js)
+      ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization',1);
+      if(debug==1){ console.log('Event send to Google Analytics: Category: AB-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: optimization, Value: 1'); }
     }
     else {
       if(debug==1){ console.log('The control version of the test is loaded.'); }
       // Set the cookie
       jQuery.cookie('ab-test-'+testid, 'control', { expires: 30, path: '/' });
       // Send data to Google Analytics
-      googleAnalyticsTrackEvent('OD-test', 'GTM-'+testid+' '+testname, 'control',1);
-      if(debug==1){ console.log('Event send to Google Analytics: Category: AD-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: control, Value: 1'); }
+      // Classic Google Analytics (ga.js)
+      _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'control',1]);
+      // Universal Analytics (analytics.js)
+      ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'control',1);
+      if(debug==1){ console.log('Event send to Google Analytics: Category: AB-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: control, Value: 1'); }
     }
   }
 }
