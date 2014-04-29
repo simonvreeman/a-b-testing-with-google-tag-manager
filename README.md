@@ -12,13 +12,13 @@ Use the rules in Google Tag Manager to set were the test on the website should b
   * Random Number macro
 * [jQuery Cookie by carhartl](https://github.com/carhartl/jquery-cookie) - A minified version is included in the script.
 
-### Create the Random Number macro in Google Tag Manager
+## Create the Random Number macro in Google Tag Manager
 1. Click on the Read button New and select Macro.
 2. Give the macro the name Randon Number.
 3. Select from the dropdown Random Number.
 4. Save the macro.
 
-### How to use this script
+## How to use this script
 1. Create a custom HTML tag in your Google Tag Manager container.
 2. Past the code from testing.js to the tag.
 3. Set a unique test id.
