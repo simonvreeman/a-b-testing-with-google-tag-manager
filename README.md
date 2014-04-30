@@ -24,7 +24,7 @@ _To use the script, you need te make the Random Number macro._
 
 ## How to use this script
 1. Create a custom HTML tag in your Google Tag Manager container.
-2. Past the code from testing.js to the tag.
+2. Past the code from [testing.js](https://github.com/simonvreeman/A-B-testing-with-Google-Tag-Manager/blob/master/testing.js) to the tag.
 3. Set a unique *test id*.
 4. Set a unique *test name*.
 5. Create a optimization version.
