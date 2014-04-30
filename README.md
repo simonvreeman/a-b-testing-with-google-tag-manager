@@ -16,6 +16,7 @@ The traffic is equally distributed among the two variations of the A/B test.
 
 ## Create the Random Number macro in Google Tag Manager
 _To use the script, you need te make the Random Number macro._
+
 1. Click on the Read button New and select Macro.
 2. Give the macro the name Randon Number.
 3. Select from the dropdown Random Number.
