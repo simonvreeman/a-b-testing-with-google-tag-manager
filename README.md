@@ -1,7 +1,7 @@
 A/B testing script for Google Tag Manager
 =========================================
 
-It is a pretty simple script for A/B testing with [Google Tag Manager](https://www.google.com/tagmanager/) and [Google Analytics](http://www.google.com/analytics/) for measuring. It uses the random function of Tag Manager, which is [pseudo random](http://www.random.org/randomness/). That is random enough for A/B testing.
+It is a pretty simple script for A/B testing with [Google Tag Manager](https://www.google.com/tagmanager/) and [Google Analytics](http://www.google.com/analytics/) for measuring. It uses the [random macro](http://www.simoahava.com/analytics/macro-guide-google-tag-manager/#17) of Tag Manager, which is [pseudo random](http://www.random.org/randomness/). That is random enough for A/B testing.
 
 It will send events to the classic (ga.js) or universial (analytics.js) version Google Analytics. You can change that for your own needs.
 
