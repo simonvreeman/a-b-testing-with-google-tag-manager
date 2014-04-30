@@ -7,7 +7,7 @@ It will send events to the classic (ga.js) or universial (analytics.js) version 
 
 Use the rules in Google Tag Manager to set were the test on the website should be running.
 
-## Requirements
+### Requirements
 * Google Tag Manager
   * Random Number macro
 * [jQuery Cookie by carhartl](https://github.com/carhartl/jquery-cookie) - A minified version is included in the script.
@@ -21,10 +21,11 @@ Use the rules in Google Tag Manager to set were the test on the website should b
 ## How to use this script
 1. Create a custom HTML tag in your Google Tag Manager container.
 2. Past the code from testing.js to the tag.
-3. Set a unique test id.
-4. Set a unique test name.
+3. Set a unique *test id*.
+4. Set a unique *test name*.
 5. Create a optimization version.
 6. Set the rules for the test in Google Tag Manager.
 7. Test is with debug on. Set debug in the script to 1 and use the debug option in Google Tag Manager.
-8. Make sure the event tracking is working.
+8. Make sure the correct event tracking is working.
+9. Turn the debug off. 
 9. Create a new version and publish it.
