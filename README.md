@@ -15,7 +15,7 @@ The traffic is equally distributed among the two variations of the A/B test.
 * [jQuery Cookie by carhartl](https://github.com/carhartl/jquery-cookie) - A minified version is included in the script.
 
 ## Create the Random Number macro in Google Tag Manager
-**To use the script, you need te make the Random Number macro.**
+_To use the script, you need te make the Random Number macro._
 1. Click on the Read button New and select Macro.
 2. Give the macro the name Randon Number.
 3. Select from the dropdown Random Number.
