@@ -11,10 +11,10 @@ The traffic is equally distributed among the two variations of the A/B test.
 
 ### Requirements
 * Google Tag Manager
-  * Random Number macro
-* [jQuery Cookie by carhartl](https://github.com/carhartl/jquery-cookie) - A minified version is included in the script.
+  * [Random Number macro](https://github.com/simonvreeman/A-B-testing-with-Google-Tag-Manager#create-the-random-number-macro-in-google-tag-manager)
+* [jQuery Cookie by carhartl](https://github.com/carhartl/jquery-cookie) - A minified version (1.4.1) is included in the script.
 
-## Create the Random Number macro in Google Tag Manager
+### Create the Random Number macro in Google Tag Manager
 _To use the script, you need te make the Random Number macro._
 
 1. Click on the Read button New and select Macro.
@@ -22,7 +22,7 @@ _To use the script, you need te make the Random Number macro._
 3. Select from the dropdown Random Number.
 4. Save the macro.
 
-## How to use this script
+### How to use this script
 1. Create a custom HTML tag in your Google Tag Manager container.
 2. Past the code from [testing.js](https://github.com/simonvreeman/A-B-testing-with-Google-Tag-Manager/blob/master/testing.js) to the tag. Make sure you use `<script>` and `</script>` before and after.
 3. Set a unique *test id*.
