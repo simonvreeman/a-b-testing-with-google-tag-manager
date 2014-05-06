@@ -1,7 +1,7 @@
 A/B testing script for Google Tag Manager
 =========================================
 
-It is a pretty simple script for A/B testing with [Google Tag Manager](https://www.google.com/tagmanager/) and [Google Analytics](http://www.google.com/analytics/) for measuring and analysis. It uses the [random macro](https://support.google.com/tagmanager/answer/2644341?hl=en#RandomNumber) of Google Tag Manager, that returns a number between 0 and 2147483647. It is [pseudo random](http://www.random.org/randomness/), but I run some tests and find that is random enough for A/B testing.
+It is a pretty simple script for A/B testing with [Google Tag Manager](https://www.google.com/tagmanager/) and [Google Analytics](http://www.google.com/analytics/) for measuring and analysis. It uses the [random macro](https://support.google.com/tagmanager/answer/2644341?hl=en#RandomNumber) of Google Tag Manager, that returns a number between 0 and 2147483647. It is [pseudo random](http://www.random.org/randomness/), but I run some tests and find that it is random enough for A/B testing.
 
 #### Google Analytics tracking
 The script will send events, custom dimensions and/or custom variables to the classic (ga.js) or universial (analytics.js) version Google Analytics. You can change that for your own needs. The custom variable is set for slot 5. When using the custom dimension, make sure you [configure it](https://support.google.com/analytics/answer/2709829?hl=en) in the Admin setting of your property. It is set for slot 20.
@@ -9,20 +9,22 @@ The script will send events, custom dimensions and/or custom variables to the cl
 #### Google Tag Manager settings
 Use the rules in Google Tag Manager to set where the test on the website should be running and how much of the traffic is included in the test. You can use the same random macro to set how mucht of the traffic should be included in the test.
 
+When you do A/B testing you want to set a sertain time fot the test. You need enough users and convorsions to get a good significance rate (normally 95% or more). When creating the custom HTML tag in Google Tag Manager you can also set a custom tag firing schedule. That means you can set the datas when the test has to start and when it has to stop. You can find it under Advancded Settings, at the bottom of the page.
+
 The traffic is equally distributed among the two variations of the A/B test. But ofcourse you have the posibility to change that for your own needs. [Dan Russell](http://dan-russell.com/2013/03/sampling-a-percentage-of-your-users-with-google-tag-manager/) explained that pretty well.
 
 Want to know and learn more about Google Tag Manager. Definitely take a look at the blog of [Simo Ahava](http://www.simoahava.com).
 
 ### Requirements
 * Google Tag Manager
-  * [Random Number macro](https://github.com/simonvreeman/A-B-testing-with-Google-Tag-Manager#create-the-random-number-macro-in-google-tag-manager)
+  * [{{Random Number}} macro](https://github.com/simonvreeman/A-B-testing-with-Google-Tag-Manager#create-the-random-number-macro-in-google-tag-manager)
 * [jQuery Cookie by carhartl](https://github.com/carhartl/jquery-cookie) - A minified version (1.4.1) is included in the script.
 
-### Create the Random Number macro in Google Tag Manager
+### Create the {{Random Number}} macro in Google Tag Manager
 _To use the script, you need te make the Random Number macro._
 
 1. Click on the Read button New and select Macro.
-2. Give the macro the name Randon Number.
+2. Give the macro the name `Randon Number`.
 3. Select from the dropdown Random Number.
 4. Save the macro.
 
