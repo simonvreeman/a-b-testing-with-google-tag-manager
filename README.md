@@ -1,11 +1,13 @@
 A/B testing script for Google Tag Manager
 =========================================
 
+_Made by [Simon Vreeman](http://vreeman.com)._
+
 It is a pretty simple script for A/B testing with [Google Tag Manager](https://www.google.com/tagmanager/) and [Google Analytics](http://www.google.com/analytics/) for measuring and analysis. It uses the [random macro](https://support.google.com/tagmanager/answer/2644341?hl=en#RandomNumber) of Google Tag Manager, that returns a number between 0 and 2147483647. It is [pseudo random](http://www.random.org/randomness/), but I run some tests and find that it is random enough for A/B testing.
 
 The biggest disadvantages of A/B testing with Google Tag Manager (not necessarily TMS in general) is that GTM loads the script asynchronous. That will cause a flicker effect on the webpage. The users can notice that something has changed and it is likely that they will behave different to it. Meaning that you will get mixed results.
 
-Other tag management systems have the option to load specific tags synchrone.
+Other tag management systems have the option to load specific tags synchrone. With some small tweaks this script will work in other tag managers.
 
 #### Google Analytics tracking
 The script will send events, custom dimensions and/or custom variables to the classic (ga.js) or universal (analytics.js) version Google Analytics. You can change that for your own needs. The custom variable is set for slot 5. When using the custom dimension, make sure you [configure it](https://support.google.com/analytics/answer/2709829?hl=en) in the Admin setting of your property. It is set for slot 20.
