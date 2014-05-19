@@ -24,11 +24,11 @@ if (cookievalue == 'optimization') {
   jQuery.cookie('ab-test-'+testid, 'optimization', { expires: 30, path: '/' });
   // Send data to Google Analytics
   // Classic Google Analytics event (ga.js)
-  _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization',1]);
+  _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization', 1, true]);
   // Classic Google Analytics custom variable (ga.js)
   _gaq.push(['_setCustomVar', 5, 'GTM-'+testid+' '+testname, 'optimization', 1 ]);
   // Universal Analytics event (analytics.js)
-  ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization',1);
+  ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization', 1, {'nonInteraction': 1});
   // Universal Analytics custom dimension (analytics.js)
   ga('set', { 'dimension20': 'GTM-'+testid+' '+testname+' optimization' });
   if(debug==1){ console.log('Event send to Google Analytics: Category: AB-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: optimization, Value: 1'); }
@@ -40,11 +40,11 @@ else {
     jQuery.cookie('ab-test-'+testid, 'control', { expires: 30, path: '/' });
     // Send data to Google Analytics
     // Classic Google Analytics (ga.js)
-    _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'control',1]);
+    _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'control', 1, true]);
     // Classic Google Analytics custom variable (ga.js)
     _gaq.push(['_setCustomVar', 5, 'GTM-'+testid+' '+testname, 'control', 1 ]);
     // Universal Analytics (analytics.js)
-    ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'control',1);
+    ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'control', 1, {'nonInteraction': 1});
     // Universal Analytics custom dimension (analytics.js)
     ga('set', { 'dimension20': 'GTM-'+testid+' '+testname+' control' });
     if(debug==1){ console.log('Event send to Google Analytics: Category: AB-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: control, Value: 1'); }
@@ -58,11 +58,11 @@ else {
       jQuery.cookie('ab-test-'+testid, 'optimization', { expires: 30, path: '/' });
       // Send data to Google Analytics
       // Classic Google Analytics (ga.js)
-      _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization',1]);
+      _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization', 1, true]);
       // Classic Google Analytics custom variable (ga.js)
       _gaq.push(['_setCustomVar', 5, 'GTM-'+testid+' '+testname, 'optimization', 1 ]);
       // Universal Analytics (analytics.js)
-      ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization',1);
+      ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'optimization', 1, {'nonInteraction': 1});
       // Universal Analytics custom dimension (analytics.js)
       ga('set', { 'dimension20': 'GTM-'+testid+' '+testname+' optimization' });
       if(debug==1){ console.log('Event send to Google Analytics: Category: AB-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: optimization, Value: 1'); }
@@ -73,11 +73,11 @@ else {
       jQuery.cookie('ab-test-'+testid, 'control', { expires: 30, path: '/' });
       // Send data to Google Analytics
       // Classic Google Analytics (ga.js)
-      _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'control',1]);
+      _gaq.push(['_trackEvent', 'AB-test', 'GTM-'+testid+' '+testname, 'control', 1, true]);
       // Classic Google Analytics custom variable (ga.js)
       _gaq.push(['_setCustomVar', 5, 'GTM-'+testid+' '+testname, 'control', 1 ]);
       // Universal Analytics (analytics.js)
-      ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'control',1);
+      ga('send', 'event', 'AB-test', 'GTM-'+testid+' '+testname, 'control', 1, {'nonInteraction': 1});
       // Universal Analytics custom dimension (analytics.js)
       ga('set', { 'dimension20': 'GTM-'+testid+' '+testname+' control' });
       if(debug==1){ console.log('Event send to Google Analytics: Category: AB-test,', 'Action: GTM-'+testid+' '+testname+',', 'Label: control, Value: 1'); }
