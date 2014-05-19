@@ -10,7 +10,7 @@ The biggest disadvantages of A/B testing with Google Tag Manager (not necessaril
 Other tag management systems have the option to load specific tags synchrone. With some small tweaks this script will work in other tag managers.
 
 #### Google Analytics tracking
-The script will send events, custom dimensions and/or custom variables to the classic (ga.js) or universal (analytics.js) version Google Analytics. You can change that for your own needs. The custom variable is set for slot 5. When using the custom dimension, make sure you [configure it](https://support.google.com/analytics/answer/2709829?hl=en) in the Admin setting of your property. It is set for slot 20.
+The script will send non-interaction events, custom dimensions and/or custom variables to the classic (ga.js) or universal (analytics.js) version Google Analytics. You can change that for your own needs. The custom variable is set for slot 5. When using the custom dimension, make sure you [configure it](https://support.google.com/analytics/answer/2709829?hl=en) in the Admin setting of your property. It is set for slot 20.
 
 #### Google Tag Manager settings
 Use the rules in Google Tag Manager to set where the test on the website should be running and how much of the traffic will be included. You can use the same random macro to set how much of the traffic should be in the test.
