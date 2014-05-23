@@ -35,7 +35,7 @@ _To use the script, you need to create the Random Number macro._
 4. Save the macro.
 
 ### How to use this script
-1. Create a custom HTML tag in your Google Tag Manager container.
+1. Create a Custom HTML tag in your Google Tag Manager container.
 2. Past the code from [testing.js](https://github.com/simonvreeman/A-B-testing-with-Google-Tag-Manager/blob/master/testing.js) to the tag. Make sure you use `<script>` and `</script>` before and after.
 3. Set a unique *test id*.
 4. Set a unique *test name*.
@@ -45,6 +45,11 @@ _To use the script, you need to create the Random Number macro._
 8. Make sure the correct Google Analytics tracking is working.
 9. Turn the debug off. 
 9. Create a new version and publish it.
+
+## Contact
+* [Google+](https://plus.google.com/+SimonVreeman?rel=author)
+* [Twitter](https://twitter.com/vreeman)
+* [Email](mailto:simon@vreeman.com)
 
 ## License
 The MIT License (MIT)
