@@ -23,7 +23,7 @@ Want to know and learn more about Google Tag Manager. Definitely take a look at 
 
 ### Requirements
 * Google Tag Manager
-  * [{{Random Number}} macro](https://github.com/simonvreeman/A-B-testing-with-Google-Tag-Manager#create-the-random-number-macro-in-google-tag-manager)
+  * [{{Random Number}} macro](#create-the-random-number-macro-in-google-tag-manager)
 * [jQuery Cookie by carhartl](https://github.com/carhartl/jquery-cookie) - A minified version (1.4.1) is included in the script.
 
 ### Create the {{Random Number}} macro in Google Tag Manager
@@ -36,7 +36,7 @@ _To use the script, you need to create the Random Number macro._
 
 ### How to use this script
 1. Create a Custom HTML tag in your Google Tag Manager container.
-2. Past the code from [testing.js](https://github.com/simonvreeman/A-B-testing-with-Google-Tag-Manager/blob/master/testing.js) to the tag. Make sure you use `<script>` and `</script>` before and after.
+2. Past the code from [testing.js](testing.js) to the tag. Make sure you use `<script>` and `</script>` before and after.
 3. Set a unique *test id*.
 4. Set a unique *test name*.
 5. Create an optimization version.
