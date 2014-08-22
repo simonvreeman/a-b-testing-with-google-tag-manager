@@ -8,15 +8,15 @@ var testName = 'Name of the A/B test';
 var number = {{Random Number}};
 var getCookie = jQuery.cookie('GTM-' + testID);
 var testVar = getCookie;
-function optimization() {"use strict";
+function optimization() {'use strict';
   // Add your code here
 }
-function setCookie(variation) {"use strict"; jQuery.cookie('GTM-' + testID, variation, {expires: 30, path: '/'}); }
-function sendGA(variation) {"use strict"; ga('send', 'event', 'AB-test', 'GTM-' + testID + ' ' + testName, variation, 1, {'nonInteraction': 1}); }
-function sendDL(variation) {"use strict"; dataLayer.push({'event': 'gtm.abtesting', 'testCategory': 'AB-test', 'testAction': 'GTM-' + testID + ' ' + testName, 'testLabel': variation, 'testValue': 1}); }
-function debugging(message) {"use strict"; if (debug === 1) {console.log(message); } }
-function control() {"use strict"; setCookie(testVar); sendGA(testVar); sendDL(testVar); debugging(testVar); }
-function variation() {"use strict"; optimization(); setCookie(testVar); sendGA(testVar); sendDL(testVar); debugging(testVar); }
+function setCookie(variation) {'use strict'; jQuery.cookie('GTM-' + testID, variation, {expires: 30, path: '/'}); }
+function sendGA(variation) {'use strict'; ga('send', 'event', 'AB-test', 'GTM-' + testID + ' ' + testName, variation, 1, {'nonInteraction': 1}); }
+function sendDL(variation) {'use strict'; dataLayer.push({'event': 'gtm.abtesting', 'abtestCategory': 'AB-test', 'abtestAction': 'GTM-' + testID + ' ' + testName, 'abtestLabel': variation, 'abtestValue': 1}); }
+function debugging(message) {'use strict'; if (debug === 1) {console.log(message); } }
+function control() {'use strict'; setCookie(testVar); sendGA(testVar); sendDL(testVar); debugging(testVar); }
+function variation() {'use strict'; optimization(); control(); }
 
 debugging('GTM-' + testID + ' ' + testName);
 
